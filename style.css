@@ -1,0 +1,56 @@
+.nav {
+  background: #ff7b00;
+  padding: 15px;
+}
+.nav ul {
+  list-style: none;
+  text-align: center;
+}
+.nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+body {
+  background: #fff7e6;
+  font-size: 16px;
+}
+
+.recipes .card, .recipes .special {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipes {
+  width: 90%;
+  margin: auto;
+}
+.recipes .card.special {
+  border-left: 5px solid #ff7b00;
+}
+.recipes .card h2 {
+  color: #333;
+}
+.recipes .card p {
+  color: #555;
+}
+.recipes .card .btn {
+  background: #ff7b00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+.recipes .card .btn:hover {
+  opacity: 0.85;
+}
