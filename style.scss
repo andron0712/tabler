@@ -1,0 +1,81 @@
+// Змінні
+$bg-color: #fff7e6;
+$accent: #ff7b00;
+$font-main: 16px;
+
+// Міксін для кнопок
+@mixin button-style($bg, $size) {
+    background: $bg;
+    padding: $size;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+// Базова карточка
+%card-base {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+// Вкладені селектори для меню
+.nav {
+    background: $accent;
+    padding: 15px;
+
+    ul {
+        list-style: none;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 0 15px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: $font-main + 2;
+            }
+        }
+    }
+}
+
+body {
+    background: $bg-color;
+    font-size: $font-main;
+}
+
+// Список рецептів
+.recipes {
+    width: 90%;
+    margin: auto;
+
+    .card {
+        @extend %card-base;
+
+        &.special {
+            border-left: 5px solid $accent;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .btn {
+            @include button-style($accent, 10px 20px);
+        }
+    }
+}
